@@ -1,0 +1,22 @@
+// Функція handleEven
+function handleEven() {
+    console.log("Число парне");
+}
+
+// Функція handleOdd
+function handleOdd() {
+    console.log("Число непарне");
+}
+
+// Функція handleNum
+function handleNum(number, evenCallback, oddCallback) {
+    if (number % 2 === 0) {
+        evenCallback();
+    } else {
+        oddCallback();
+    }
+}
+
+// Виклик handleNum з прикладом
+handleNum(7, handleEven, handleOdd); // Очікується: "Число непарне"
+handleNum(8, handleEven, handleOdd); // Очікується: "Число парне"
